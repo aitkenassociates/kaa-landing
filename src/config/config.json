@@ -4,8 +4,8 @@
     "base_url": "https://kaa-landing.netlify.app",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "kaa-logo.png",
-    "logo": "kaa-logo.png",
+    "favicon": "/images/kaa-logo.png",
+    "logo": "/images/kaa-logo.png",
     "logo_width": "200",
     "logo_height": "100",
     "logo_text": "Karen Aitken & Associates"
