@@ -1,0 +1,33 @@
+{
+  "site": {
+    "title": "Karen Aitken & Associates",
+    "base_url": "https://kaa-landing.netlify.app",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "kaa-logo.png",
+    "logo": "kaa-logo.png",
+    "logo_width": "200",
+    "logo_height": "100",
+    "logo_text": "Karen Aitken & Associates"
+  },
+  "settings": {
+    "pagination": 4,
+    "summary_length": 200
+  },
+  "nav_button": {
+    "enable": true,
+    "label": "Get Started",
+    "link": "/contact"
+  },
+  "params": {
+    "contact_form_action": "",
+    "tag_manager_id": "",
+    "footer_content": "Landscape Architecture & Design",
+    "copyright": "© 2024 Karen Aitken & Associates. All rights reserved."
+  },
+  "metadata": {
+    "meta_author": "Karen Aitken & Associates",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "Landscape Architecture & Design"
+  }
+}
