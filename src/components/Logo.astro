@@ -1,6 +1,7 @@
 ---
-import { Image } from 'astro:assets'
-import logo from '../assets/img/logo.svg'
+import { Image } from 'astro:assets';
+import logo from '../assets/img/kaa-logo-leaf.png';
+import signature from '../assets/img/kaa-logo-sign.png';
 
 /**
  * Logo Component
@@ -8,23 +9,23 @@ import logo from '../assets/img/logo.svg'
  * @description Logo description
  */
 interface Props {
-  /**
-   * Whether to load the image eagerly or lazily
-   * @default 'eager'
-   */
-  loading?: 'eager' | 'lazy'
+    /**
+     * Whether to load the image eagerly or lazily
+     * @default 'eager'
+     */
+    loading?: 'eager' | 'lazy';
 }
 
-const { loading = 'eager' }: Props = Astro.props
+const { loading = 'eager' }: Props = Astro.props;
 ---
 
 <a href="/" class="flex items-center gap-2 !no-underline">
-  <Image src={logo} alt="Accessible Astro Logo" width="47" height="37" loading={loading} />
-  <span class="font-bold">Accessible Astro</span>
+    <Image src={logo} alt="Accessible Astro Logo" width="47" height="37" loading={loading} />
+    <Image src={signature} alt="Accessible Astro Logo" width="167" height="37" loading={loading} />
 </a>
 
 <style lang="scss">
-  a {
-    color: var(--foreground-color);
-  }
+    a {
+        color: var(--foreground-color);
+    }
 </style>
