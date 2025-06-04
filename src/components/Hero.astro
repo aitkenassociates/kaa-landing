@@ -1,58 +1,134 @@
 ---
-import { Icon } from 'astro-icon/components'
-import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import gardenImage from '../assets/images/landscape/garden-1-small.jpg';
 
 /**
  * Hero Component
  *
- * @description A component that displays a hero section with a title, description, and image
+ * @description A component that displays a hero section with a title, description, and full-size background image
  */
 interface Props {
-  /**
-   * The source URL for the image
-   */
-  src?: string
+    /**
+     * The source URL for the image
+     */
+    src?: string;
 }
 
-const { src = '/astronaut-hero-img.webp' }: Props = Astro.props
+const { src = '/astronaut-hero-img.webp' }: Props = Astro.props;
 ---
 
-<section class="hero my-24">
-  <div class="container">
-    <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
-      <div class="flex flex-col items-center gap-8 md:items-start">
-        <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-          <slot><span class="text-gradient">Accessible</span> Starter for Astro</slot>
-        </h1>
-        <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <a class="button has-icon" href="https://github.com/incluud/accessible-astro-starter">
-            <Icon name="lucide:star" />
-            Star on GitHub
-          </a>
-          <a class="button has-icon color-secondary" href="https://accessible-astro.incluud.dev/">
-            <Icon name="lucide:bookmark" />
-            Read the docs
-          </a>
-        </div>
-      </div>
-      <Image class="hidden lg:block" src={src} alt="" decoding="async" width={800} height={600} loading="eager" />
+<section class="hero">
+    <div class="hero-background">
+        <Image src={gardenImage} alt="Beautiful garden landscape" class="hero-bg-image" decoding="async" loading="eager" quality="high" />
+        <div class="hero-overlay"></div>
     </div>
-  </div>
+    <div class="hero-content">
+        <div class="container">
+            <div class="hero-inner">
+                <div class="flex flex-col items-center gap-8 md:items-start">
+                    <h1 class="text-center text-2xl md:text-left lg:text-3xl">LANDSCAPE ARCHITECTURE & DESIGN</h1>
+                    <h1 class="text-center text-6xl md:text-left lg:text-8xl">
+                        <slot><span class="text-gradient">Creating California gardens for the decades</span></slot>
+                    </h1>
+                    <h2 class="text-center text-4xl md:text-left lg:text-6xl">Karen Aitken & Associates</h2>
+                    <div class="flex flex-col gap-3 min-[500px]:flex-row">
+                        <a class="button has-icon" href="#">
+                            <Icon name="lucide:leaf" />
+                            LEARN MORE
+                        </a>
+                        <a class="button has-icon color-secondary" href="#">
+                            <Icon name="lucide:flower" />
+                            GET STARTED
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <style lang="scss">
-  h1 {
-    text-wrap: unset;
-  }
+    .hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
 
-  .text-gradient {
-    background: linear-gradient(
-      315deg,
-      light-dark(var(--color-primary-300), var(--color-secondary-100)) 25%,
-      light-dark(var(--color-secondary-300), var(--color-primary-200))
-    );
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+    .hero-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .hero-bg-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.3) 100%);
+        z-index: 2;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        padding: 2rem 0;
+    }
+
+    .hero-inner {
+        display: flex;
+        align-items: center;
+        min-height: 80vh;
+    }
+
+    h1 {
+        text-wrap: unset;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+        text-wrap: unset;
+        color: var(--color-neutral-100);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        font-weight: 200;
+    }
+
+    .text-gradient {
+        background: linear-gradient(315deg, #ffffff 25%, #f0f0f0 75%);
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: none;
+    }
+
+    // Responsive adjustments
+    @media (max-width: 768px) {
+        .hero {
+            min-height: 100svh;
+        }
+
+        .hero-content {
+            padding: 1rem 0;
+        }
+
+        .hero-inner {
+            min-height: 70vh;
+        }
+    }
 </style>
