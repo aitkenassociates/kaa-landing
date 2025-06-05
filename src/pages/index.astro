@@ -5,7 +5,8 @@ import Feature from '@components/Feature.astro';
 import Counter from '@components/Counter.astro';
 import ContentMedia from '@components/ContentMedia.astro';
 import ExternalLink from '@components/ExternalLink.astro';
-import { Accordion, AccordionItem, Avatar, AvatarGroup, Tabs, TabsList, TabsTab, TabsPanel, Media } from 'accessible-astro-components';
+import { Accordion, AccordionItem, Avatar, AvatarGroup, Tabs, TabsList, TabsTab, TabsPanel, Media, Card, Avatar } from 'accessible-astro-components';
+import gardenImage from '../assets/images/landscape/garden-1-small.jpg';
 ---
 
 <DefaultLayout title="Home">
@@ -77,25 +78,48 @@ import { Accordion, AccordionItem, Avatar, AvatarGroup, Tabs, TabsList, TabsTab,
     <section class="mt-32 mb-32">
         <div class="container bg-neutral-100">
             <h2 class="mb-16 text-6xl">Starting Plans</h2>
+
+            <ul class="my-3 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <li>
+                    <Card imageComponent={gardenImage} url="#" title="Phase I">
+                        <h3>Single Render Package:</h3>
+                        <p>Front or backyard specific area such as pool, solid roof, etc.</p>
+                        <b class="text-2xl">$1,000 USD</b>
+                    </Card>
+                </li>
+                <li>
+                    <Card imageComponent={gardenImage} url="#" title="Phase II">
+                        <h3>Standard Render Package:</h3>
+                        <p>Full residential and landscape model, covering all designed elements.</p>
+                        <b class="text-2xl">$2,000 USD</b>
+                    </Card>
+                </li>
+                <li>
+                    <Card imageComponent={gardenImage} url="#" title="Phase III">
+                        <h3>Full Render Package:</h3>
+                        <p>Extensive square footage residence and landscape model with/or difficult terrain.</p>
+                        <b class="text-2xl">$3,000 USD</b>
+                    </Card>
+                </li>
+            </ul>
         </div>
     </section>
 
-    <ContentMedia imgSrc="/accessible-components.webp">
-        <h2>Accessible components</h2>
-        <p class="text-2xl">
-            This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a lot of others are integrated using a <ExternalLink
-                href="https://github.com/incluud/accessible-astro-components">separate package</ExternalLink
-            >. They'll get you up and running in building an accessible solution for your visitors.
+    <ContentMedia imgSrc="garden-2-small.jpg">
+        <Avatar
+            title="Jack Smith"
+            subtitle="Consultant"
+            img="https://plus.unsplash.com/premium_photo-1672239496290-5061cfee7ebb?auto=format&fit=crop&q=100&w=800"
+        />
+        <p class="text-3xl">
+            <i
+                >"Karen is simply the BEST. She has the vision as soon as she walks on the project site. I truly believe homes sell more because of Karen's
+                design and creativity.""</i
+            >
         </p>
     </ContentMedia>
-    <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
-        <h2>WCAG 2.2 AA compliant</h2>
-        <p class="text-2xl">
-            Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible navigation and components, clear
-            outlines and tab indicators and the right color contrast, you're more certain of reaching WCAG AA compliance.
-        </p>
-    </ContentMedia>
-    <section class="my-64">
+
+    <section class="my-64 bg-neutral-300 py-32">
         <div class="container grid grid-cols-1 gap-12 md:grid-cols-2">
             <div class="flex flex-col items-start gap-4">
                 <h2 class="text-6xl">FAQ</h2>
