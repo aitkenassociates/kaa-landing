@@ -15,7 +15,7 @@ import gardenImage from '../assets/images/landscape/garden-1-small.jpg';
         <ContentMedia imgSrc="garden-2-small.jpg" reverseImg={true}>
             <h2>Designing beautiful gardens is a business we love...</h2>
             <p class="text-2xl">
-                Our reputation as a premiere landscape architecture firm is based upon our responsiveness to each client’s unique project needs. We take pride
+                Our reputation as a premiere landscape architecture firm is based upon our responsiveness to each client's unique project needs. We take pride
                 in creating thoughtful, innovative, and environmentally conscious landscapes which will serve our clients for years to come.
             </p>
         </ContentMedia>
@@ -124,72 +124,70 @@ import gardenImage from '../assets/images/landscape/garden-1-small.jpg';
             <div class="flex flex-col items-start gap-4">
                 <h2 class="text-6xl">FAQ</h2>
                 <p class="text-2xl">
-                    This section demonstrates how to effectively use the Accordion component to organize and display frequently asked questions in an accessible
-                    and user-friendly way.
+                    This section addresses the most frequently asked questions about landscape and garden design to help you create your dream outdoor space.
                 </p>
-                <a class="button" href="/faq">Contact support team</a>
+                <a class="button" href="#">Contact our design team</a>
             </div>
             <div class="space-content">
                 <Accordion>
-                    <AccordionItem name="exclusive" title="What is WCAG and why is it important?" open>
+                    <AccordionItem name="exclusive" title="What key factors should I consider when planning my landscape design?" open>
                         <p>
-                            WCAG (Web Content Accessibility Guidelines) is a set of internationally recognized standards for web accessibility. Following WCAG
-                            ensures your website is usable by people with various disabilities, including visual, auditory, physical, and cognitive impairments.
-                            It's important not just for accessibility, but also for legal compliance, SEO, and reaching a wider audience.
+                            When planning your landscape design, consider your soil type, local climate, property size, and intended use of the space. Think
+                            about whether you want areas for entertaining, relaxing, gardening, or children's play. Also evaluate sunlight patterns, drainage
+                            needs, and how the design will complement your home's architecture. Understanding these factors upfront helps create a functional
+                            and beautiful outdoor space.
                         </p>
                     </AccordionItem>
-                    <AccordionItem name="exclusive" title="What's the difference between ARIA labels and alt text?">
+                    <AccordionItem name="exclusive" title="How do I choose the right plants for my garden?">
                         <p>
-                            Alt text is specifically for describing images to screen reader users, while ARIA labels (aria-label, aria-labelledby) can describe
-                            any element on a page. Alt text is HTML's native way to provide alternative text for images, while ARIA labels are part of the ARIA
-                            specification that helps make dynamic content and advanced UI controls more accessible.
+                            Select plants based on your USDA planting zone and local climate conditions. Consider the amount of sunlight each area receives,
+                            your soil type, and water requirements. Native plants are often the best choice as they're adapted to local conditions and require
+                            less maintenance. Group plants with similar needs together and think about seasonal interest - choose a mix of evergreens, flowering
+                            plants, and foliage that provides year-round appeal.
                         </p>
                     </AccordionItem>
-                    <AccordionItem name="exclusive" title="Why is keyboard navigation important?">
+                    <AccordionItem name="exclusive" title="What does the landscape design process typically involve?">
                         <p>
-                            Keyboard navigation is essential for users who can't use a mouse, including people with motor disabilities, visual impairments, or
-                            those who simply prefer keyboard controls. A website should be fully operable using only a keyboard, with visible focus indicators
-                            and logical tab order. This includes being able to access all interactive elements and navigate through content efficiently.
+                            The landscape design process begins with an initial consultation to discuss your vision and needs. This is followed by a thorough
+                            site analysis examining terrain, soil, climate, and existing vegetation. Next comes concept development with preliminary designs,
+                            then detailed planning including specific plant and material selections. Finally, the installation phase brings your design to life
+                            with proper planting and construction.
                         </p>
                     </AccordionItem>
-                    <AccordionItem name="exclusive" title="What is a sufficient color contrast ratio?">
+                    <AccordionItem name="exclusive" title="How can I make my landscape design more sustainable?">
                         <p>
-                            According to WCAG 2.2 AA standards, text should have a minimum contrast ratio of 4.5:1 against its background for regular text, and
-                            3:1 for large text (18pt or 14pt bold). For non-text elements like icons or buttons, a minimum ratio of 3:1 is required. This
-                            ensures content is readable for users with visual impairments or color blindness.
+                            Create a sustainable landscape by using native plants that require less water and maintenance, implementing efficient irrigation
+                            systems like drip irrigation, and incorporating rain gardens to manage stormwater runoff. Consider xeriscaping techniques for
+                            drought-resistant areas, use organic mulch to retain moisture, and select durable materials for hardscaping that won't need frequent
+                            replacement.
                         </p>
                     </AccordionItem>
-                    <AccordionItem name="exclusive" title="How do I make custom components accessible?">
+                    <AccordionItem name="exclusive" title="What maintenance considerations should I keep in mind?">
                         <p>
-                            To make custom components accessible, focus on these key aspects: use semantic HTML where possible, implement proper keyboard
-                            support, add appropriate ARIA attributes, manage focus when needed, and ensure adequate color contrast. Always test with screen
-                            readers and keyboard navigation. Consider using established design patterns from the <a
-                                href="https://www.w3.org/WAI/ARIA/apg/patterns/">ARIA Authoring Practices Guide</a
-                            >.
+                            Plan for ongoing maintenance from the design stage by choosing low-maintenance plants and durable materials. Ensure easy access to
+                            all garden areas for pruning and care. Consider plant growth patterns to avoid overcrowding, incorporate mulch to suppress weeds and
+                            retain moisture, and think about automated irrigation systems. Even low-maintenance gardens need some care, so budget for regular
+                            watering, pruning, and seasonal cleanups.
+                        </p>
+                    </AccordionItem>
+                    <AccordionItem name="exclusive" title="How much should I expect to spend on landscape design?">
+                        <p>
+                            Landscape design costs vary widely based on the size, scope, and complexity of your project. Basic designs like simple patios may
+                            start around $1,500, while comprehensive master plans including outdoor kitchens, lighting, and custom features can cost $5,000 or
+                            more. Generally, design fees represent 2-4% of your total construction budget. Remember that professional design is an investment
+                            that maximizes the value of your construction dollars and helps avoid costly mistakes.
+                        </p>
+                    </AccordionItem>
+                    <AccordionItem name="exclusive" title="Do I need to have a clear vision before hiring a landscape designer?">
+                        <p>
+                            No, you don't need to know exactly what you want before hiring a designer. Simply wanting to improve your outdoor space is enough to
+                            get started. The design process will help you explore options, define goals, and discover features you may not have considered. A
+                            good designer will guide you through understanding what's possible on your property and what works best for your lifestyle, family
+                            needs, and budget.
                         </p>
                     </AccordionItem>
                 </Accordion>
             </div>
-        </div>
-    </section>
-    <section class="my-64">
-        <div class="space-content container">
-            <h2 class="text-6xl">Our community</h2>
-            <p class="text-2xl">
-                We're a community of developers who are passionate about making the web more accessible. We're always looking for new ways to improve the
-                accessibility of the web.
-            </p>
-            <AvatarGroup display="grid" gridItemsSize="300px" gridGap="2rem">
-                <Avatar initials="RJ" title="Robert Johnson" subtitle="Manager" />
-                <Avatar initials="MT" title="Maria Torres" subtitle="Developer" />
-                <Avatar initials="AK" title="Alex Kim" subtitle="Designer" />
-                <Avatar initials="SL" title="Sarah Lee" subtitle="Content Strategist" />
-                <Avatar initials="JP" title="James Peterson" subtitle="QA Engineer" />
-                <Avatar initials="LW" title="Lisa Wong" subtitle="Product Owner" />
-                <Avatar initials="DM" title="David Martinez" subtitle="UX Researcher" />
-                <Avatar initials="EB" title="Emma Brown" subtitle="Accessibility Specialist" />
-                <Avatar initials="TC" title="Thomas Chen" subtitle="Frontend Developer" />
-            </AvatarGroup>
         </div>
     </section>
 </DefaultLayout>
