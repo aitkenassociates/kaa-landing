@@ -1,0 +1,142 @@
+---
+import DefaultLayout from '@layouts/DefaultLayout.astro';
+import PageHeader from '@components/PageHeader.astro';
+import ContentMedia from '@components/ContentMedia.astro';
+import { Avatar, Card } from 'accessible-astro-components';
+---
+
+<DefaultLayout title="About Us">
+    <PageHeader
+        title="About Karen Aitken & Associates"
+        subtitle="Creating beautiful, sustainable landscapes for over two decades"
+        bgType="gradient"
+    />
+
+    <section class="my-24">
+        <div class="container">
+            <div class="mx-auto max-w-4xl">
+                <h2 class="mb-8 text-4xl">Our Story</h2>
+                <p class="mb-6 text-xl leading-relaxed">
+                    Founded in 2002, Karen Aitken & Associates has grown from a small residential design studio into one of the region's most respected landscape architecture firms. What began as one designer's passion for creating outdoor spaces that connect people with nature has evolved into a full-service firm serving residential, commercial, and civic clients.
+                </p>
+                <p class="mb-6 text-xl leading-relaxed">
+                    Over the years, we've had the privilege of transforming hundreds of properties, from intimate backyard gardens to expansive commercial developments. Our work has been recognized for its thoughtful integration of sustainable practices, native plantings, and innovative design solutions that stand the test of time.
+                </p>
+                <p class="text-xl leading-relaxed">
+                    Today, our team continues to uphold the founding principles that have guided us from the beginning: listen carefully to our clients, respect the natural environment, and create landscapes that bring joy and beauty to everyday life.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-neutral-200 py-24">
+        <ContentMedia imgSrc="garden-2-small.jpg" reverseImg={true}>
+            <h2 class="text-4xl">Our Design Philosophy</h2>
+            <p class="text-xl leading-relaxed">
+                We believe that exceptional landscape design goes beyond aesthetics. It's about creating spaces that enhance how people live, work, and interact with their environment.
+            </p>
+            <ul class="mt-6 space-y-4 text-lg">
+                <li class="flex items-start gap-3">
+                    <span class="mt-1 text-2xl text-green-600">●</span>
+                    <span><strong>Client-Centered Approach:</strong> Every project begins with understanding your unique vision, lifestyle, and needs.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="mt-1 text-2xl text-green-600">●</span>
+                    <span><strong>Environmental Stewardship:</strong> We prioritize native plants, water conservation, and sustainable materials.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="mt-1 text-2xl text-green-600">●</span>
+                    <span><strong>Timeless Design:</strong> Our landscapes are crafted to mature beautifully and serve our clients for generations.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="mt-1 text-2xl text-green-600">●</span>
+                    <span><strong>Innovation:</strong> We embrace new technologies and techniques while honoring traditional craftsmanship.</span>
+                </li>
+            </ul>
+        </ContentMedia>
+    </section>
+
+    <section class="my-24">
+        <div class="container">
+            <h2 class="mb-12 text-center text-4xl">Meet Our Team</h2>
+            <div class="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-6 text-center">
+                    <img
+                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400&h=400"
+                        alt="Karen Aitken"
+                        class="mx-auto mb-4 h-32 w-32 rounded-full object-cover"
+                    />
+                    <h3 class="mb-1 text-xl font-bold">Karen Aitken</h3>
+                    <p class="mb-3 text-sm text-neutral-600">Founder & Principal Designer</p>
+                    <p class="text-neutral-700">
+                        With over 25 years of experience, Karen brings an artist's eye and a deep understanding of horticulture to every project.
+                    </p>
+                </div>
+
+                <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-6 text-center">
+                    <img
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400&h=400"
+                        alt="Michael Torres"
+                        class="mx-auto mb-4 h-32 w-32 rounded-full object-cover"
+                    />
+                    <h3 class="mb-1 text-xl font-bold">Michael Torres</h3>
+                    <p class="mb-3 text-sm text-neutral-600">Senior Landscape Architect</p>
+                    <p class="text-neutral-700">
+                        Michael specializes in sustainable design and has led numerous award-winning commercial and civic projects.
+                    </p>
+                </div>
+
+                <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-6 text-center">
+                    <img
+                        src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400&h=400"
+                        alt="Sarah Chen"
+                        class="mx-auto mb-4 h-32 w-32 rounded-full object-cover"
+                    />
+                    <h3 class="mb-1 text-xl font-bold">Sarah Chen</h3>
+                    <p class="mb-3 text-sm text-neutral-600">Design Associate</p>
+                    <p class="text-neutral-700">
+                        Sarah brings fresh perspectives and expertise in 3D visualization, helping clients see their future landscapes come to life.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-neutral-100 py-24">
+        <div class="container">
+            <div class="mx-auto max-w-4xl text-center">
+                <h2 class="mb-8 text-4xl">Our Commitment</h2>
+                <p class="mb-8 text-xl leading-relaxed">
+                    At Karen Aitken & Associates, we measure our success not just by the beauty of our designs, but by the lasting relationships we build with our clients and the positive impact we have on our community and environment.
+                </p>
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                    <div class="rounded-lg bg-white p-6 shadow-sm">
+                        <div class="mb-4 text-4xl">🌱</div>
+                        <h3 class="mb-2 text-lg font-bold">Sustainable Practices</h3>
+                        <p class="text-neutral-600">Committed to eco-friendly design and native plant integration</p>
+                    </div>
+                    <div class="rounded-lg bg-white p-6 shadow-sm">
+                        <div class="mb-4 text-4xl">🤝</div>
+                        <h3 class="mb-2 text-lg font-bold">Client Partnership</h3>
+                        <p class="text-neutral-600">Collaborative approach ensuring your vision becomes reality</p>
+                    </div>
+                    <div class="rounded-lg bg-white p-6 shadow-sm">
+                        <div class="mb-4 text-4xl">⭐</div>
+                        <h3 class="mb-2 text-lg font-bold">Excellence</h3>
+                        <p class="text-neutral-600">Unwavering commitment to quality in every detail</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-24">
+        <div class="container text-center">
+            <h2 class="mb-6 text-4xl">Ready to Transform Your Space?</h2>
+            <p class="mx-auto mb-8 max-w-2xl text-xl text-neutral-600">
+                Let's discuss how we can bring your landscape vision to life. Schedule a consultation with our team today.
+            </p>
+            <a href="#" class="button">Contact Us</a>
+        </div>
+    </section>
+</DefaultLayout>
