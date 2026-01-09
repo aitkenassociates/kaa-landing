@@ -1,0 +1,164 @@
+---
+import DefaultLayout from '@layouts/DefaultLayout.astro'
+import PageHeader from '@components/PageHeader.astro'
+import ContentMedia from '@components/ContentMedia.astro'
+import { Avatar, Card } from 'accessible-astro-components'
+import gardenImage from '../assets/images/landscape/garden-1-small.jpg'
+---
+
+<DefaultLayout title="About Us">
+  <PageHeader
+    title="About Karen Aitken & Associates"
+    subtitle="Creating beautiful, sustainable California gardens for over three decades."
+    bgType="bordered"
+  />
+
+  <section class="container my-16">
+    <div class="space-content">
+      <h2>Our Story</h2>
+      <p class="text-xl">
+        Karen Aitken & Associates is a premiere landscape architecture firm dedicated to creating thoughtful,
+        innovative, and environmentally conscious landscapes. Founded with a passion for transforming outdoor
+        spaces, we have grown to become one of California's most trusted names in landscape design.
+      </p>
+      <p>
+        Our journey began with a simple belief: every outdoor space has the potential to become a personal
+        sanctuary. Over the years, we have designed hundreds of gardens, from intimate residential courtyards
+        to expansive commercial landscapes, each reflecting the unique vision of our clients and the natural
+        beauty of California.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-neutral-100 py-16">
+    <div class="container">
+      <h2 class="mb-12 text-5xl">Our Philosophy</h2>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div class="space-content rounded-lg bg-white p-8 shadow-sm">
+          <h3 class="text-2xl">Client-Centered Design</h3>
+          <p>
+            We believe that the best landscapes emerge from deep collaboration with our clients.
+            Every project begins with understanding your lifestyle, preferences, and dreams for your outdoor space.
+          </p>
+        </div>
+        <div class="space-content rounded-lg bg-white p-8 shadow-sm">
+          <h3 class="text-2xl">Environmental Stewardship</h3>
+          <p>
+            Sustainability is at the heart of everything we do. We prioritize native plants, water-efficient
+            designs, and materials that minimize environmental impact while maximizing beauty.
+          </p>
+        </div>
+        <div class="space-content rounded-lg bg-white p-8 shadow-sm">
+          <h3 class="text-2xl">Timeless Aesthetics</h3>
+          <p>
+            We design gardens meant to be enjoyed for decades. Our landscapes mature gracefully,
+            becoming more beautiful with each passing season while remaining true to their original vision.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-16">
+    <h2 class="mb-12 text-5xl">Meet Our Team</h2>
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div class="team-member rounded-lg border border-neutral-200 p-6">
+        <Avatar
+          title="Karen Aitken"
+          subtitle="Principal & Founder"
+          img="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400"
+        />
+        <p class="mt-4">
+          With over 30 years of experience, Karen brings an unparalleled vision and expertise to every project.
+          Her designs have been featured in numerous publications and have won multiple industry awards.
+        </p>
+      </div>
+      <div class="team-member rounded-lg border border-neutral-200 p-6">
+        <Avatar
+          title="Michael Chen"
+          subtitle="Senior Designer"
+          img="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400"
+        />
+        <p class="mt-4">
+          Michael specializes in sustainable design practices and native California plantings.
+          His innovative approach has helped countless clients create water-wise gardens that thrive year-round.
+        </p>
+      </div>
+      <div class="team-member rounded-lg border border-neutral-200 p-6">
+        <Avatar
+          title="Sarah Rodriguez"
+          subtitle="Project Manager"
+          img="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400"
+        />
+        <p class="mt-4">
+          Sarah ensures every project runs smoothly from concept to completion. Her attention to detail
+          and client communication skills make the design process seamless and enjoyable.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-neutral-200 py-16">
+    <div class="container">
+      <h2 class="mb-12 text-5xl">Our Mission</h2>
+      <div class="space-content mx-auto max-w-3xl text-center">
+        <blockquote class="text-2xl italic">
+          "To create outdoor spaces that inspire, nurture, and endure. We believe that a thoughtfully
+          designed garden can transform not just a property, but the lives of those who inhabit it."
+        </blockquote>
+        <p class="mt-8 text-lg">
+          Every garden we design is a testament to our commitment to excellence, sustainability, and the
+          timeless beauty of California's natural landscape. We don't just create gardens; we create
+          living spaces where memories are made and nature is celebrated.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-16">
+    <div class="space-content">
+      <h2>Recognition & Awards</h2>
+      <p>
+        Our work has been recognized by leading industry organizations and publications, including:
+      </p>
+      <ul class="list-inside list-disc">
+        <li>American Society of Landscape Architects (ASLA) Award of Excellence</li>
+        <li>California Landscape Contractors Association Design Award</li>
+        <li>Featured in Garden Design Magazine, Sunset Magazine, and Houzz</li>
+        <li>Best of Houzz Design Award - Multiple Years</li>
+        <li>Environmental Stewardship Recognition - California Native Plant Society</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bg-neutral-100 py-16">
+    <div class="container text-center">
+      <h2 class="mb-6 text-4xl">Ready to Transform Your Outdoor Space?</h2>
+      <p class="mb-8 text-xl">Let's create something beautiful together.</p>
+      <a class="button" href="https://form.typeform.com/to/Gqmo3i">Schedule a Consultation</a>
+    </div>
+  </section>
+</DefaultLayout>
+
+<style>
+  .team-member {
+    transition: box-shadow 0.2s ease;
+  }
+  .team-member:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  blockquote {
+    position: relative;
+    padding: 1rem 2rem;
+  }
+  blockquote::before {
+    content: '"';
+    position: absolute;
+    left: 0;
+    top: -0.5rem;
+    font-size: 4rem;
+    color: var(--color-primary-500);
+    opacity: 0.3;
+    font-family: Georgia, serif;
+  }
+</style>
